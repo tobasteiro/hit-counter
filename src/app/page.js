@@ -1,6 +1,7 @@
 import React from "react";
 
 import { readFile, writeFile } from "../helpers/file-helpers";
+import Button from "./components/button";
 
 const DATABASE_PATH = "/src/database.json";
 
@@ -12,7 +13,9 @@ function Home() {
   return (
     <main>
       <h1>Welcome!</h1>
-      <p>You are visitor number {content.hits}.</p>
+      <p>
+        You are visitor number <Button>{content.hits}.</Button>
+      </p>
     </main>
   );
 }
